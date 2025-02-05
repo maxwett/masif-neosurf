@@ -82,6 +82,13 @@ chmod +x ./preprocess_pdb.sh
 # without ligand
 ./preprocess_pdb.sh example/1a7x.pdb 1A7X_A -o example/output/
 ```
+### Preprocess a large number of sequences at once
+Takes a csv as input with columns `PDB`and `LIGAND`both in the format PDBid/LIGANDid_CHAIN_ID. If no ligand is provided skips a step
+```bash
+chmod +x ./preprocess_pdb_batch.sh
+./preprocess_pdb_batch.sh -c input_csv.csv -i input_folder/ -o output_folder/
+
+```
 
 ## PyMOL plugin
 
